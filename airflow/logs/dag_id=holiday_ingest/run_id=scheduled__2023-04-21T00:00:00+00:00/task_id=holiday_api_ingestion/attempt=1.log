@@ -1,0 +1,26 @@
+[2024-07-25T10:07:34.144+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: holiday_ingest.holiday_api_ingestion scheduled__2023-04-21T00:00:00+00:00 [queued]>
+[2024-07-25T10:07:34.308+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: holiday_ingest.holiday_api_ingestion scheduled__2023-04-21T00:00:00+00:00 [queued]>
+[2024-07-25T10:07:34.348+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2024-07-25T10:07:34.628+0000] {taskinstance.py:1382} INFO - Executing <Task(HolidayAPIIngestOperator): holiday_api_ingestion> on 2023-04-21 00:00:00+00:00
+[2024-07-25T10:07:34.778+0000] {standard_task_runner.py:57} INFO - Started process 4829 to run task
+[2024-07-25T10:07:34.831+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'holiday_ingest', 'holiday_api_ingestion', 'scheduled__2023-04-21T00:00:00+00:00', '--job-id', '1085', '--raw', '--subdir', 'DAGS_FOLDER/holiday_ingest/holiday_ingest_dag.py', '--cfg-path', '/tmp/tmp4_gye3o4']
+[2024-07-25T10:07:34.847+0000] {standard_task_runner.py:85} INFO - Job 1085: Subtask holiday_api_ingestion
+[2024-07-25T10:07:35.799+0000] {task_command.py:416} INFO - Running <TaskInstance: holiday_ingest.holiday_api_ingestion scheduled__2023-04-21T00:00:00+00:00 [running]> on host c7799c7b21e5
+[2024-07-25T10:07:36.867+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Ajay' AIRFLOW_CTX_DAG_ID='holiday_ingest' AIRFLOW_CTX_TASK_ID='holiday_api_ingestion' AIRFLOW_CTX_EXECUTION_DATE='2023-04-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-04-21T00:00:00+00:00'
+[2024-07-25T10:07:38.642+0000] {logging_mixin.py:154} INFO - {'status': 402, 'requests': {'used': 48, 'available': 9952, 'resets': '2024-08-01 00:00:00'}, 'error': "Free accounts are limited to last year's historical data only. Upgrade to premium for access to all holiday data. For more information, please visit https://holidayapi.com/docs"}
+[2024-07-25T10:07:38.727+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=holiday_ingest, task_id=holiday_api_ingestion, execution_date=20230421T000000, start_date=20240725T100734, end_date=20240725T100738
+[2024-07-25T10:07:38.866+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-07-25T10:07:38.931+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-25T14:21:51.007+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: holiday_ingest.holiday_api_ingestion scheduled__2023-04-21T00:00:00+00:00 [queued]>
+[2024-07-25T14:21:51.053+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: holiday_ingest.holiday_api_ingestion scheduled__2023-04-21T00:00:00+00:00 [queued]>
+[2024-07-25T14:21:51.053+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2024-07-25T14:21:51.146+0000] {taskinstance.py:1382} INFO - Executing <Task(HolidayAPIIngestOperator): holiday_api_ingestion> on 2023-04-21 00:00:00+00:00
+[2024-07-25T14:21:51.218+0000] {standard_task_runner.py:57} INFO - Started process 3356 to run task
+[2024-07-25T14:21:51.273+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'holiday_ingest', 'holiday_api_ingestion', 'scheduled__2023-04-21T00:00:00+00:00', '--job-id', '347', '--raw', '--subdir', 'DAGS_FOLDER/holiday_ingest/holiday_ingest_dag.py', '--cfg-path', '/tmp/tmp7a0qh4kk']
+[2024-07-25T14:21:51.281+0000] {standard_task_runner.py:85} INFO - Job 347: Subtask holiday_api_ingestion
+[2024-07-25T14:21:51.652+0000] {task_command.py:416} INFO - Running <TaskInstance: holiday_ingest.holiday_api_ingestion scheduled__2023-04-21T00:00:00+00:00 [running]> on host b7334bec8397
+[2024-07-25T14:21:52.735+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Ajay' AIRFLOW_CTX_DAG_ID='holiday_ingest' AIRFLOW_CTX_TASK_ID='holiday_api_ingestion' AIRFLOW_CTX_EXECUTION_DATE='2023-04-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-04-21T00:00:00+00:00'
+[2024-07-25T14:21:54.479+0000] {logging_mixin.py:154} INFO - {'status': 402, 'requests': {'used': 539, 'available': 9461, 'resets': '2024-08-01 00:00:00'}, 'error': "Free accounts are limited to last year's historical data only. Upgrade to premium for access to all holiday data. For more information, please visit https://holidayapi.com/docs"}
+[2024-07-25T14:21:54.905+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=holiday_ingest, task_id=holiday_api_ingestion, execution_date=20230421T000000, start_date=20240725T142151, end_date=20240725T142154
+[2024-07-25T14:21:55.275+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-07-25T14:21:55.336+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,17 @@
+[2024-07-25T14:22:43.588+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_ingestion_dag.t1 scheduled__2024-07-24T00:00:00+00:00 [queued]>
+[2024-07-25T14:22:43.714+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_ingestion_dag.t1 scheduled__2024-07-24T00:00:00+00:00 [queued]>
+[2024-07-25T14:22:43.730+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2024-07-25T14:22:43.950+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): t1> on 2024-07-24 00:00:00+00:00
+[2024-07-25T14:22:44.095+0000] {standard_task_runner.py:57} INFO - Started process 3497 to run task
+[2024-07-25T14:22:44.094+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'daily_ingestion_dag', 't1', 'scheduled__2024-07-24T00:00:00+00:00', '--job-id', '398', '--raw', '--subdir', 'DAGS_FOLDER/daily_ingestion/daily_ingestion_dag.py', '--cfg-path', '/tmp/tmpvzks9pos']
+[2024-07-25T14:22:44.149+0000] {standard_task_runner.py:85} INFO - Job 398: Subtask t1
+[2024-07-25T14:22:44.826+0000] {task_command.py:416} INFO - Running <TaskInstance: daily_ingestion_dag.t1 scheduled__2024-07-24T00:00:00+00:00 [running]> on host b7334bec8397
+[2024-07-25T14:22:46.174+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='junioralexio607@gmail.com.com' AIRFLOW_CTX_DAG_OWNER='Ajay' AIRFLOW_CTX_DAG_ID='daily_ingestion_dag' AIRFLOW_CTX_TASK_ID='t1' AIRFLOW_CTX_EXECUTION_DATE='2024-07-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-24T00:00:00+00:00'
+[2024-07-25T14:22:46.191+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-07-25T14:22:46.191+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', "echo 'This is task no1 '"]
+[2024-07-25T14:22:46.216+0000] {subprocess.py:86} INFO - Output:
+[2024-07-25T14:22:46.220+0000] {subprocess.py:93} INFO - This is task no1
+[2024-07-25T14:22:46.221+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-07-25T14:22:46.470+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=daily_ingestion_dag, task_id=t1, execution_date=20240724T000000, start_date=20240725T142243, end_date=20240725T142246
+[2024-07-25T14:22:46.801+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-07-25T14:22:47.165+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

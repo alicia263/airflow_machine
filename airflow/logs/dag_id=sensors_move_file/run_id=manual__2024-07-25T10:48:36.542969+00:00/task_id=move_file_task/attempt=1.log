@@ -1,0 +1,16 @@
+[2024-07-25T10:48:39.293+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sensors_move_file.move_file_task manual__2024-07-25T10:48:36.542969+00:00 [queued]>
+[2024-07-25T10:48:39.306+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sensors_move_file.move_file_task manual__2024-07-25T10:48:36.542969+00:00 [queued]>
+[2024-07-25T10:48:39.310+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-07-25T10:48:39.337+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): move_file_task> on 2024-07-25 10:48:36.542969+00:00
+[2024-07-25T10:48:39.356+0000] {standard_task_runner.py:57} INFO - Started process 7235 to run task
+[2024-07-25T10:48:39.363+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'sensors_move_file', 'move_file_task', 'manual__2024-07-25T10:48:36.542969+00:00', '--job-id', '1549', '--raw', '--subdir', 'DAGS_FOLDER/move_file/move_file_to_output_dag.py', '--cfg-path', '/tmp/tmpq_fp8rka']
+[2024-07-25T10:48:39.364+0000] {standard_task_runner.py:85} INFO - Job 1549: Subtask move_file_task
+[2024-07-25T10:48:39.465+0000] {task_command.py:416} INFO - Running <TaskInstance: sensors_move_file.move_file_task manual__2024-07-25T10:48:36.542969+00:00 [running]> on host c7799c7b21e5
+[2024-07-25T10:48:39.652+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sensors_move_file' AIRFLOW_CTX_TASK_ID='move_file_task' AIRFLOW_CTX_EXECUTION_DATE='2024-07-25T10:48:36.542969+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-25T10:48:36.542969+00:00'
+[2024-07-25T10:48:39.661+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-07-25T10:48:39.661+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'mv $AIRFLOW_HOME/files_to_test/sensors_files/*.json $AIRFLOW_HOME/files_to_test/output_files/']
+[2024-07-25T10:48:39.707+0000] {subprocess.py:86} INFO - Output:
+[2024-07-25T10:48:39.718+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-07-25T10:48:39.790+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=sensors_move_file, task_id=move_file_task, execution_date=20240725T104836, start_date=20240725T104839, end_date=20240725T104839
+[2024-07-25T10:48:39.861+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-07-25T10:48:39.896+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,36 @@
+[2024-07-25T09:17:11.499+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simple_ids_ingest.get_id_from_json scheduled__2023-04-01T00:00:00+00:00 [queued]>
+[2024-07-25T09:17:11.658+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simple_ids_ingest.get_id_from_json scheduled__2023-04-01T00:00:00+00:00 [queued]>
+[2024-07-25T09:17:11.669+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2024-07-25T09:17:11.983+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): get_id_from_json> on 2023-04-01 00:00:00+00:00
+[2024-07-25T09:17:12.091+0000] {standard_task_runner.py:57} INFO - Started process 541 to run task
+[2024-07-25T09:17:12.156+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'simple_ids_ingest', 'get_id_from_json', 'scheduled__2023-04-01T00:00:00+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/ids_ingest/ids_ingest_dag.py', '--cfg-path', '/tmp/tmpxxer8b6l']
+[2024-07-25T09:17:12.201+0000] {standard_task_runner.py:85} INFO - Job 30: Subtask get_id_from_json
+[2024-07-25T09:17:12.736+0000] {task_command.py:416} INFO - Running <TaskInstance: simple_ids_ingest.get_id_from_json scheduled__2023-04-01T00:00:00+00:00 [running]> on host c7799c7b21e5
+[2024-07-25T09:17:13.075+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Ajay' AIRFLOW_CTX_DAG_ID='simple_ids_ingest' AIRFLOW_CTX_TASK_ID='get_id_from_json' AIRFLOW_CTX_EXECUTION_DATE='2023-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-04-01T00:00:00+00:00'
+[2024-07-25T09:17:13.077+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ids_ingest/ids_ingest_dag.py", line 18, in get_ids_from_json
+    with open(filename_json, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/files_to_test/github_events.json'
+[2024-07-25T09:17:13.113+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=simple_ids_ingest, task_id=get_id_from_json, execution_date=20230401T000000, start_date=20240725T091711, end_date=20240725T091713
+[2024-07-25T09:17:13.268+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 30 for task get_id_from_json ([Errno 2] No such file or directory: '/opt/airflow/files_to_test/github_events.json'; 541)
+[2024-07-25T09:17:13.366+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-07-25T09:17:13.456+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-25T14:21:41.684+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simple_ids_ingest.get_id_from_json scheduled__2023-04-01T00:00:00+00:00 [queued]>
+[2024-07-25T14:21:41.750+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simple_ids_ingest.get_id_from_json scheduled__2023-04-01T00:00:00+00:00 [queued]>
+[2024-07-25T14:21:41.753+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2024-07-25T14:21:41.852+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): get_id_from_json> on 2023-04-01 00:00:00+00:00
+[2024-07-25T14:21:42.041+0000] {standard_task_runner.py:57} INFO - Started process 3336 to run task
+[2024-07-25T14:21:42.109+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'simple_ids_ingest', 'get_id_from_json', 'scheduled__2023-04-01T00:00:00+00:00', '--job-id', '336', '--raw', '--subdir', 'DAGS_FOLDER/ids_ingest/ids_ingest_dag.py', '--cfg-path', '/tmp/tmpkux3j4nc']
+[2024-07-25T14:21:42.131+0000] {standard_task_runner.py:85} INFO - Job 336: Subtask get_id_from_json
+[2024-07-25T14:21:42.932+0000] {task_command.py:416} INFO - Running <TaskInstance: simple_ids_ingest.get_id_from_json scheduled__2023-04-01T00:00:00+00:00 [running]> on host b7334bec8397
+[2024-07-25T14:21:44.317+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Ajay' AIRFLOW_CTX_DAG_ID='simple_ids_ingest' AIRFLOW_CTX_TASK_ID='get_id_from_json' AIRFLOW_CTX_EXECUTION_DATE='2023-04-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-04-01T00:00:00+00:00'
+[2024-07-25T14:21:44.362+0000] {logging_mixin.py:154} INFO - ['25208138097', '25208138110', '25208138076', '25208138082', '25208138077', '25208138087', '25208138078', '25208138069', '25208138072', '25208138080', '25208138070', '25208138067', '25208138068', '25208138066', '25208138047', '25208138051', '25208138053', '25208138060', '25208138071', '25208138061', '25208138030', '25208138044', '25208138043', '25208138038', '25208138032', '25208138018', '25208138016', '25208138012', '25208138008', '25208137998']
+[2024-07-25T14:21:44.397+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-07-25T14:21:44.500+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=simple_ids_ingest, task_id=get_id_from_json, execution_date=20230401T000000, start_date=20240725T142141, end_date=20240725T142144
+[2024-07-25T14:21:44.820+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-07-25T14:21:44.986+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

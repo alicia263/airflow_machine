@@ -1,0 +1,34 @@
+[2024-07-25T09:16:51.648+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simple_ids_ingest.first_task scheduled__2023-03-25T00:00:00+00:00 [queued]>
+[2024-07-25T09:16:52.197+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simple_ids_ingest.first_task scheduled__2023-03-25T00:00:00+00:00 [queued]>
+[2024-07-25T09:16:52.217+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2024-07-25T09:16:52.756+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): first_task> on 2023-03-25 00:00:00+00:00
+[2024-07-25T09:16:53.080+0000] {standard_task_runner.py:57} INFO - Started process 477 to run task
+[2024-07-25T09:16:53.159+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'simple_ids_ingest', 'first_task', 'scheduled__2023-03-25T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/ids_ingest/ids_ingest_dag.py', '--cfg-path', '/tmp/tmpumpf6r6k']
+[2024-07-25T09:16:53.246+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask first_task
+[2024-07-25T09:16:54.298+0000] {task_command.py:416} INFO - Running <TaskInstance: simple_ids_ingest.first_task scheduled__2023-03-25T00:00:00+00:00 [running]> on host c7799c7b21e5
+[2024-07-25T09:16:55.756+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Ajay' AIRFLOW_CTX_DAG_ID='simple_ids_ingest' AIRFLOW_CTX_TASK_ID='first_task' AIRFLOW_CTX_EXECUTION_DATE='2023-03-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-03-25T00:00:00+00:00'
+[2024-07-25T09:16:55.757+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-07-25T09:16:55.784+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo $AIRFLOW_HOME']
+[2024-07-25T09:16:56.052+0000] {subprocess.py:86} INFO - Output:
+[2024-07-25T09:16:56.181+0000] {subprocess.py:93} INFO - /opt/***
+[2024-07-25T09:16:56.196+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-07-25T09:16:56.314+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=simple_ids_ingest, task_id=first_task, execution_date=20230325T000000, start_date=20240725T091651, end_date=20240725T091656
+[2024-07-25T09:16:56.793+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-07-25T09:16:56.972+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-07-25T14:21:11.071+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simple_ids_ingest.first_task scheduled__2023-03-25T00:00:00+00:00 [queued]>
+[2024-07-25T14:21:11.364+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simple_ids_ingest.first_task scheduled__2023-03-25T00:00:00+00:00 [queued]>
+[2024-07-25T14:21:11.365+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2024-07-25T14:21:11.707+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): first_task> on 2023-03-25 00:00:00+00:00
+[2024-07-25T14:21:11.855+0000] {standard_task_runner.py:57} INFO - Started process 3249 to run task
+[2024-07-25T14:21:11.955+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'simple_ids_ingest', 'first_task', 'scheduled__2023-03-25T00:00:00+00:00', '--job-id', '307', '--raw', '--subdir', 'DAGS_FOLDER/ids_ingest/ids_ingest_dag.py', '--cfg-path', '/tmp/tmpcv5c859l']
+[2024-07-25T14:21:12.035+0000] {standard_task_runner.py:85} INFO - Job 307: Subtask first_task
+[2024-07-25T14:21:13.110+0000] {task_command.py:416} INFO - Running <TaskInstance: simple_ids_ingest.first_task scheduled__2023-03-25T00:00:00+00:00 [running]> on host b7334bec8397
+[2024-07-25T14:21:15.122+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Ajay' AIRFLOW_CTX_DAG_ID='simple_ids_ingest' AIRFLOW_CTX_TASK_ID='first_task' AIRFLOW_CTX_EXECUTION_DATE='2023-03-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-03-25T00:00:00+00:00'
+[2024-07-25T14:21:15.157+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-07-25T14:21:15.188+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo $AIRFLOW_HOME']
+[2024-07-25T14:21:15.987+0000] {subprocess.py:86} INFO - Output:
+[2024-07-25T14:21:16.165+0000] {subprocess.py:93} INFO - /opt/***
+[2024-07-25T14:21:16.167+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-07-25T14:21:16.647+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=simple_ids_ingest, task_id=first_task, execution_date=20230325T000000, start_date=20240725T142111, end_date=20240725T142116
+[2024-07-25T14:21:17.741+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-07-25T14:21:18.295+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

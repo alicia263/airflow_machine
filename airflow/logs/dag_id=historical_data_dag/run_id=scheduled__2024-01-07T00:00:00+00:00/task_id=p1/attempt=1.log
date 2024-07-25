@@ -1,0 +1,18 @@
+[2024-07-25T14:57:34.791+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: historical_data_dag.p1 scheduled__2024-01-07T00:00:00+00:00 [queued]>
+[2024-07-25T14:57:34.925+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: historical_data_dag.p1 scheduled__2024-01-07T00:00:00+00:00 [queued]>
+[2024-07-25T14:57:34.926+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2024-07-25T14:57:35.131+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): p1> on 2024-01-07 00:00:00+00:00
+[2024-07-25T14:57:35.278+0000] {standard_task_runner.py:57} INFO - Started process 5402 to run task
+[2024-07-25T14:57:35.323+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'historical_data_dag', 'p1', 'scheduled__2024-01-07T00:00:00+00:00', '--job-id', '693', '--raw', '--subdir', 'DAGS_FOLDER/historical_data/historical_data_dag.py', '--cfg-path', '/tmp/tmp822qebqo']
+[2024-07-25T14:57:35.492+0000] {standard_task_runner.py:85} INFO - Job 693: Subtask p1
+[2024-07-25T14:57:36.361+0000] {task_command.py:416} INFO - Running <TaskInstance: historical_data_dag.p1 scheduled__2024-01-07T00:00:00+00:00 [running]> on host b7334bec8397
+[2024-07-25T14:57:38.323+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='junioralexio607@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='historical_data_dag' AIRFLOW_CTX_TASK_ID='p1' AIRFLOW_CTX_EXECUTION_DATE='2024-01-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-07T00:00:00+00:00'
+[2024-07-25T14:57:38.324+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/utils/context.py:206: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-07-25T14:57:38.396+0000] {logging_mixin.py:154} INFO - execution_date:2024-01-07T00:00:00+00:00
+[2024-07-25T14:57:38.415+0000] {logging_mixin.py:154} INFO - task_instance:<TaskInstance: historical_data_dag.p1 scheduled__2024-01-07T00:00:00+00:00 [running]>
+[2024-07-25T14:57:38.421+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-07-25T14:57:38.670+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=historical_data_dag, task_id=p1, execution_date=20240107T000000, start_date=20240725T145734, end_date=20240725T145738
+[2024-07-25T14:57:39.196+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-07-25T14:57:39.476+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

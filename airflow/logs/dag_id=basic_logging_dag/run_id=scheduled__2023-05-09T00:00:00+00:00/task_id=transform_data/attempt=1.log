@@ -1,0 +1,14 @@
+[2024-07-25T13:19:29.805+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: basic_logging_dag.transform_data scheduled__2023-05-09T00:00:00+00:00 [queued]>
+[2024-07-25T13:19:29.816+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: basic_logging_dag.transform_data scheduled__2023-05-09T00:00:00+00:00 [queued]>
+[2024-07-25T13:19:29.816+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2024-07-25T13:19:29.898+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): transform_data> on 2023-05-09 00:00:00+00:00
+[2024-07-25T13:19:30.018+0000] {standard_task_runner.py:57} INFO - Started process 629 to run task
+[2024-07-25T13:19:30.051+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'basic_logging_dag', 'transform_data', 'scheduled__2023-05-09T00:00:00+00:00', '--job-id', '156', '--raw', '--subdir', 'DAGS_FOLDER/basic_logging_email/basic_logging_dag.py', '--cfg-path', '/tmp/tmpk83wiwkt']
+[2024-07-25T13:19:30.125+0000] {standard_task_runner.py:85} INFO - Job 156: Subtask transform_data
+[2024-07-25T13:19:30.805+0000] {task_command.py:416} INFO - Running <TaskInstance: basic_logging_dag.transform_data scheduled__2023-05-09T00:00:00+00:00 [running]> on host b7334bec8397
+[2024-07-25T13:19:31.836+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alexioaaron75@gmail.com' AIRFLOW_CTX_DAG_OWNER='Ajay' AIRFLOW_CTX_DAG_ID='basic_logging_dag' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2023-05-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-09T00:00:00+00:00'
+[2024-07-25T13:19:31.839+0000] {basic_logging_dag.py:34} INFO - Then transform data
+[2024-07-25T13:19:31.884+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-07-25T13:19:32.008+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=basic_logging_dag, task_id=transform_data, execution_date=20230509T000000, start_date=20240725T131929, end_date=20240725T131932
+[2024-07-25T13:19:32.422+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-07-25T13:19:32.799+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
